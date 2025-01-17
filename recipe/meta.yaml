@@ -1,5 +1,5 @@
 {% set name = "tox-gh" %}
-{% set version = "1.4.4" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tox_gh-{{ version }}.tar.gz
-  sha256: 4ea585f66585b90f5826b1677cfc9453747792a0f9ff83d468603bc17556e07b
+  sha256: bd4c56d1ebcde4ca2450fed347610a739614a7225945bdc89a67c8395eac9d63
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
