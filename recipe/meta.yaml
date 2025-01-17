@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tox_gh-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tox_gh-{{ version }}.tar.gz
   sha256: 4ea585f66585b90f5826b1677cfc9453747792a0f9ff83d468603bc17556e07b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatch-vcs >=0.4
     - hatchling >=1.25
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - tox >=4.18.1
 
 test:
@@ -31,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/tox-dev/tox-gh
