@@ -1,5 +1,6 @@
 {% set name = "tox-gh" %}
 {% set version = "1.6.1" %}
+{% set python_min = "3.10.0" %}
 
 package:
   name: {{ name|lower }}
