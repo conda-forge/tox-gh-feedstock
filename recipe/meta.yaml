@@ -1,5 +1,6 @@
 {% set name = "tox-gh" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
+{% set python_min = "3.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tox_gh-{{ version }}.tar.gz
-  sha256: b575563926604d85c4fba150a7573f33924e3c37f3496a7563f0d9d7a9db7767
+  sha256: 070b69bf50821393e1ff0237006bb61b33347e2060eaec415fbfdefa48131aa7
 
 build:
   noarch: python
