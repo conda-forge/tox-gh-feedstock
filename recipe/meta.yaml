@@ -24,6 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - tox >=4.31
+    - typing-extensions >=4.12
   run_constrained:
     - covdefaults >=2.3
     - devpi-process >=1.0.2
