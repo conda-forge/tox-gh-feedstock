@@ -1,5 +1,5 @@
 {% set name = "tox-gh" %}
-{% set version = "1.7.1" %}
+{% set version = "1.8.0" %}
 {% set python_min = "3.10.0" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tox_gh-{{ version }}.tar.gz
-  sha256: 4f4871ee4091b41464f2df9ab1fcedb14a48accdecbb60d53297301a9d8984c6
+  sha256: 19c151525e6ed383b2fd23f8f3a35301ee12f3438c19ac7062f81c30958626ad
 
 build:
   noarch: python
@@ -24,6 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - tox >=4.31
+    - typing-extensions >=4.12
   run_constrained:
     - covdefaults >=2.3
     - devpi-process >=1.0.2
