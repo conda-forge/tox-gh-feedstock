@@ -1,6 +1,5 @@
 {% set name = "tox-gh" %}
 {% set version = "1.9.1" %}
-{% set python_min = "3.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -19,19 +18,21 @@ requirements:
   host:
     - python {{ python_min }}
     - hatch-vcs >=0.5
-    - hatchling >=1.27
+    - hatchling >=1.32.4
+    - hatch-fancy-pypi-readme >=25.1
     - pip
   run:
     - python >={{ python_min }}
-    - tox >=4.31
-    - typing-extensions >=4.12
+    - tox >=4.64.7
+    - typing-extensions >=4.16
   run_constrained:
     - covdefaults >=2.3
-    - devpi-process >=1.0.2
-    - diff-cover >=9.7.1
-    - pytest >=8.4.2
-    - pytest-cov >=7
-    - pytest-mock >=3.15.1
+    - devpi-process >=1.2
+    - diff-cover >=10.6
+    - pytest >=9.1.1
+    - pytest-cov >=7.1
+    - pytest-mock >=3.16
+    - tox-uv >=1.36.1
 
 test:
   imports:
