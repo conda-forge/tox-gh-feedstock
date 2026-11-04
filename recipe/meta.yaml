@@ -1,5 +1,5 @@
 {% set name = "tox-gh" %}
-{% set version = "1.9.1" %}
+{% set version = "1.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/tox_gh-{{ version }}.tar.gz
-  sha256: 3b1a473dc0ea45ed9ab4d180b3d7f9c748c3efec3e375a0575b2980429975d63
+  sha256: 3006f4f7c1bd36ee1579b9d8f842daec036d14a418f74baffc56043fab086798
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - tox >=4.64.7
-    - typing-extensions >=4.16
+    - typing_extensions >=4.16
   run_constrained:
     - covdefaults >=2.3
     - devpi-process >=1.2
