@@ -21,6 +21,7 @@ requirements:
     - hatchling >=1.32.4
     - hatch-fancy-pypi-readme >=25.1
     - pip
+    - python-sbom >=0.1.2
   run:
     - python >={{ python_min }}
     - tox >=4.64.7
