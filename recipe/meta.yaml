@@ -1,5 +1,5 @@
 {% set name = "tox-gh" %}
-{% set version = "1.9.3" %}
+{% set version = "1.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/tox_gh-{{ version }}.tar.gz
-  sha256: d420405ff3102c1b6435af552f608c75e4b340bc66cb4066bc9c55c9f39317b9
+  sha256: 638ea56ee12f6d533cfa4447fd0a2453b6e4aa513139d8600c0d4fcbafc90e42
 
 build:
   noarch: python
